@@ -4,7 +4,7 @@
   "description": "A counter thingy for Smarpy and NovaPro81",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/server.js"
   },
   "repository": {
     "type": "git",
