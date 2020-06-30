@@ -14,4 +14,7 @@ module.exports = (app) => {
 
     app.route('/api/counter/set/:amount')
         .get(counter.setValue);
+
+    app.route('/')
+        .get((req, res) => res.redirect('/view.html'));
 }

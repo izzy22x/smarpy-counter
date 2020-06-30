@@ -7,7 +7,7 @@ const cors = require('cors');
 dotenv.config();
 
 const app = express();
-const port = 80;
+const port = process.env.PORT || 5000;
 
 const Counter = require('./api/models/counterModel');
 
@@ -24,4 +24,4 @@ routes(app);
 
 app.listen(port);
 
-console.log('Server started on port 80');
+console.log(`Server started on port ${port}`);
