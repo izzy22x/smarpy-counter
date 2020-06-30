@@ -12,7 +12,7 @@ const port = 80;
 const Counter = require('./api/models/counterModel');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://root:Lxiy728p825VjTrn@cluster0.ccjcb.mongodb.net/smarpy?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_STRING, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
