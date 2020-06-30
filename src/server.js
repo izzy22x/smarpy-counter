@@ -1,15 +1,15 @@
-import express from 'express';
-import mongoose, { mongo } from 'mongoose';
-import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
-import cors from 'cors';
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
+const cors = require('cors');
 
 dotenv.config();
 
 const app = express();
 const port = 80;
 
-const Counter = require('./api/models/counter');
+const Counter = require('./api/models/counterModel');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb+srv://root:Lxiy728p825VjTrn@cluster0.ccjcb.mongodb.net/smarpy?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
