@@ -17,6 +17,7 @@ mongoose.connect(process.env.MONGODB_STRING, { useNewUrlParser: true, useUnified
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static('public'));
 
 const routes = require('./api/routes/routes');
 routes(app);

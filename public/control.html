@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="https://static-cdn.jtvnw.net/jtv_user_pictures/4ca0a28a-ad3c-45ae-a557-9c22a06bb65a-profile_image-300x300.png" />
+
+        <title>Smarpy's Counter</title>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.min.css">
+    </head>
+    <body>
+        <div class="count">
+            Current Count: <span id="count">PLACEHOLDER</span>
+        </div>
+        <div class="control">
+            <div class="grid-item">
+                <button id="increase" title="Increase (+)"><i class="fa fa-fw fa-plus" aria-hidden="true"></i></button>
+            </div>
+            <div class="grid-item">
+                <button id="decrease" title="Decrease (-)"><i class="fa fa-fw fa-minus" aria-hidden="true"></i></button>
+            </div>
+            <div class="grid-item">
+                <button id="set" title="Set (=)"><i class="fa fa-fw fa-pencil" aria-hidden="true"></i></button>
+            </div>
+            <div class="grid-item">
+                <input type="number" min="1" max="1000" id="increaseVal" value="1">
+            </div>
+            <div class="grid-item">
+                <input type="number" min="1" max="1000" id="decreaseVal" value="1">
+            </div>
+            <div class="grid-item">
+                <input type="number" min="0" max="1000" id="setVal" value="0">
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+        <script src="/control.js" defer></script>
+    </body>
+</html>

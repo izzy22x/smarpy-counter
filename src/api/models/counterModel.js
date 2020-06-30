@@ -3,9 +3,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const CounterSchema = new Schema({
-    value: {
+    type: {
+        type: String
+    },
+    count: {
         type: Number
     }
 });
 
-module.exports = mongoose.model('Counter', CounterSchema);
+module.exports = mongoose.model('Counter', CounterSchema, 'counter');
